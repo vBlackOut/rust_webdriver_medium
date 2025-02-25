@@ -18,8 +18,10 @@ cd rust_webdriver_medium
 ```./chromedriver```
 
 ### Compiler et exécuter le projet
+```sh
 cargo build
 cargo run
+```
 
 ### Dépendances
     Thirtyfour : >= 0.32
