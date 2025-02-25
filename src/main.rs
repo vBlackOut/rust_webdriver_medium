@@ -59,7 +59,7 @@ async fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
     // visit the target page
     let search = "search?q=google";
     let number_scroll = 100;
-    let _timesleep_scroll = 800; // in milli seconds
+    let timesleep_scroll = 800; // in milli seconds
 
     let link_search = format!("{}/{}", "https://medium.com", search);
     driver.goto(link_search).await?;
@@ -67,7 +67,7 @@ async fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
     // and print it
     for i in 1..=number_scroll {
      driver.execute_script("window.scrollTo(0, document.body.scrollHeight);", vec![]).await?;
-     sleep(Duration::from_millis(_timesleep_scroll)).await;
+     sleep(Duration::from_millis(timesleep_scroll)).await;
      match driver.find(By::XPath("//button[contains(text(), 'Show more')]")).await {
           Ok(button) => {
                println!("Bouton trouvé avec XPath, clique numéro: {}", i);
