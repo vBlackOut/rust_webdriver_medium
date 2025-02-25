@@ -6,8 +6,10 @@ Ce projet utilise [Thirtyfour](https://github.com/stevepryde/thirtyfour) pour au
 ## Installation et Exécution
 
 ### Dépendances
+```
     Thirtyfour : >= 0.32  
     ChromeDriver : 133.0.6943.98 (ou version compatible)  
+```
 
 ### **Cloner le projet**
 ```sh
