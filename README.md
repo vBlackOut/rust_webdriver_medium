@@ -21,9 +21,9 @@ cd rust_webdriver_medium
 ```sh
 cargo build
 cargo run
-```
+```  
 
-### Dépendances  
+### Dépendances 
     Thirtyfour : >= 0.32  
     ChromeDriver : 133.0.6943.98 (ou version compatible)  
 
