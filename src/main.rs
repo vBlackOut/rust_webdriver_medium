@@ -27,6 +27,7 @@ async fn get_element_text_xpath(driver: &WebDriver, xpath_element: &str, author:
           // give attrib link
           let link = &item2.attr("href").await?;
             
+          // get link inside the Some it's small particularity rust use if let.
           if let Some(link) = link {
                let link_parts: Vec<&str> = link.split("/").collect();
               
