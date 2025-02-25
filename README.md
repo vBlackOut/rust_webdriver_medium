@@ -5,6 +5,10 @@ Ce projet utilise [Thirtyfour](https://github.com/stevepryde/thirtyfour) pour au
 ---
 ## Installation et Exécution
 
+### Dépendances 
+    Thirtyfour : >= 0.32  
+    ChromeDriver : 133.0.6943.98 (ou version compatible)  
+
 ### **Cloner le projet**
 ```sh
 git clone https://github.com/vBlackOut/rust_webdriver_medium.git
@@ -22,9 +26,5 @@ cd rust_webdriver_medium
 cargo build
 cargo run
 ```  
-
-### Dépendances 
-    Thirtyfour : >= 0.32  
-    ChromeDriver : 133.0.6943.98 (ou version compatible)  
 
 
