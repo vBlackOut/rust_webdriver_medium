@@ -10,20 +10,20 @@ async fn get_page(driver: &WebDriver) -> Result<(), Box<dyn Error + Send + Sync>
 }
 
 async fn get_element_text_xpath(driver: &WebDriver, xpath_element: &str, author: &str) -> Result<(), Box<dyn Error + Send + Sync>> {
-    let _element = driver.find_all(By::XPath(xpath_element)).await?;
+    let element = driver.find_all(By::XPath(xpath_element)).await?;
     
-    println!("Nombre d'éléments trouvés : {}", _element.len());
+    println!("Nombre d'éléments trouvés : {}", element.len());
 
     let mut links_set = HashSet::new();
     // iter for all parent element
-    for (i, item) in _element.iter().enumerate() {
+    for (i, item) in element.iter().enumerate() {
         let text_html = item.text().await?;
 
         // find link author in parent (this is search child) 
-        let _element2 = item.find_all(By::XPath(author)).await?;
+        let element2 = item.find_all(By::XPath(author)).await?;
 
         // iter child element
-        for (i, item2) in _element2.iter().enumerate() {
+        for (i, item2) in element2.iter().enumerate() {
           // give attrib link
           let link = &item2.attr("href").await?;
             
