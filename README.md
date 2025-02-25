@@ -10,8 +10,9 @@ Ce projet utilise [Thirtyfour](https://github.com/stevepryde/thirtyfour) pour au
 git clone https://github.com/vBlackOut/rust_webdriver_medium.git
 cd rust_webdriver_medium
 ```
+
 ### Installer les dépendances
-```curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh``
+```curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh```
 
 ### Télécharger et lancer chromedriver
 ```./chromedriver```
