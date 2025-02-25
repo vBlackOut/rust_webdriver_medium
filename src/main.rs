@@ -33,7 +33,7 @@ async fn get_element_text_xpath(driver: &WebDriver, xpath_element: &str, author:
               
                // compare is contains author in url @....
                if link_parts[1].contains("@") {
-                    let url_user: Vec<_> = link_parts[1].split("?").collect();
+                    let url_user: Vec<&str> = link_parts[1].split("?").collect();
                     // build url
                     let formatted_link = format!("https://medium.com/{}/feed", url_user[0]);
                     
